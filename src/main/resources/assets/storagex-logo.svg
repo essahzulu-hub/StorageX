@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="StorageX logo">
+  <rect width="128" height="128" rx="24" fill="#2563A6"/>
+  <path d="M25 42c0-7 6-12 13-12h21l10 12h21c7 0 13 5 13 12v34c0 7-6 12-13 12H38c-7 0-13-5-13-12V42Z" fill="#fff"/>
+  <path d="M40 64h48M40 78h31" fill="none" stroke="#2563A6" stroke-width="7" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="dashboard" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.essah.storagex.ui.DashboardController">
+    <padding><Insets bottom="24.0" left="24.0" right="24.0" top="24.0"/></padding>
+    <top>
+        <VBox spacing="10.0" styleClass="dashboard-header">
+            <HBox spacing="16.0">
+                <Label fx:id="welcomeLabel" styleClass="dashboard-title"/>
+                <Label fx:id="quotaLabel" styleClass="quota"/>
+                <Button onAction="#handleLogout" text="Log Out"/>
+            </HBox>
+            <HBox spacing="8.0">
+                <Label text="Location:"/>
+                <Label fx:id="pathLabel" styleClass="path-label"/>
+                <Button onAction="#handleGoToRoot" text="My Files"/>
+                <Button onAction="#handleRefresh" text="Refresh"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <HBox spacing="24.0" BorderPane.alignment="CENTER">
+            <VBox spacing="10.0" styleClass="panel" HBox.hgrow="ALWAYS">
+                <Label styleClass="panel-title" text="Folders"/>
+                <ListView fx:id="folderList" prefHeight="300.0" prefWidth="320.0" VBox.vgrow="ALWAYS"/>
+                <HBox spacing="8.0">
+                    <Button onAction="#handleNewFolder" text="New Folder"/>
+                    <Button onAction="#handleOpenFolder" text="Open Folder"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="10.0" styleClass="panel" HBox.hgrow="ALWAYS">
+                <Label styleClass="panel-title" text="Files"/>
+                <ListView fx:id="fileList" prefHeight="300.0" prefWidth="420.0" VBox.vgrow="ALWAYS"/>
+                <HBox spacing="8.0">
+                    <Button onAction="#handleUpload" text="Upload File"/>
+                    <Button onAction="#handleDownload" text="Download Selected"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <Label fx:id="statusLabel" styleClass="dashboard-status" wrapText="true"/>
+    </bottom>
+</BorderPane>

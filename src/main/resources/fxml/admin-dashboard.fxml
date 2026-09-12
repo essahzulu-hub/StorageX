@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_LEFT" spacing="18.0" styleClass="admin-page" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.essah.storagex.ui.AdminDashboardController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+    </padding>
+
+    <HBox spacing="14.0">
+        <Label styleClass="brand-avatar" text="S"/>
+        <VBox spacing="4.0">
+            <Label styleClass="app-title" text="Administration"/>
+            <Label styleClass="subtitle" text="StorageX system overview"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="16.0">
+        <VBox prefWidth="240.0" spacing="8.0" styleClass="admin-card">
+            <Label styleClass="admin-card-title" text="Users"/>
+            <Label text="User management will appear here." wrapText="true"/>
+        </VBox>
+        <VBox prefWidth="240.0" spacing="8.0" styleClass="admin-card">
+            <Label styleClass="admin-card-title" text="Storage"/>
+            <Label text="Storage usage and health will appear here." wrapText="true"/>
+        </VBox>
+        <VBox prefWidth="240.0" spacing="8.0" styleClass="admin-card">
+            <Label styleClass="admin-card-title" text="Activity"/>
+            <Label text="Recent administrative activity will appear here." wrapText="true"/>
+        </VBox>
+    </HBox>
+
+    <Label fx:id="statusLabel" styleClass="dashboard-status" text="Administrative tools are ready to be added." wrapText="true"/>
+    <Button onAction="#handleLogout" text="Log Out"/>
+</VBox>
